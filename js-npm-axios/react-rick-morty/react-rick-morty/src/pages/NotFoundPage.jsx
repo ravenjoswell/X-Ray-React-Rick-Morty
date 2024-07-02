@@ -5,7 +5,7 @@ import MyNavbar from "../components/Navbar"
 function NotFoundPage(){
     return(
         <>
-        <MyNavbar />
+        <MyNavbar/>
         <div>Not Found Page</div>
         </>
     )
