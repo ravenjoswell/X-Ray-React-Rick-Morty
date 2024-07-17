@@ -1,23 +1,25 @@
-import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
-
-
-
+import '../App.css';
+import reactLogo from '../assets/react.svg'
 
 function MyNavbar(){
+
+
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
-          <Container>
-            <Navbar.Brand as={Link} to='/'>Rick and Morty</Navbar.Brand>
+          <Container className="nav">
+            <Navbar.Brand className="nav-title" as={Link} to='/'>
+              <a href="https://react.dev" target="_blank">
+              <img src={reactLogo} className="logo react" alt="React logo" />
+              </a>Rick And Morty
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                <Nav.Link as={Link} to='/about'>About</Nav.Link>
-                <Nav.Link as={Link} to='/characters'>Characters</Nav.Link>
+                <Nav.Link className="link" as={Link} to='/characters'>Characters</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
